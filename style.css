@@ -1,0 +1,323 @@
+/* Google fuente */
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Quicksand:wght@300;400;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --color1: #EDEDE9;
+    --color2: #D6CCC2;
+    --color3: #F5EBE0;
+    --color4: #E3D5CA;
+    --color5: #D5BDAF;
+
+    --fuentePrincipal: 'Kdam Thmor Pro', sans-serif;
+    --font-family2: 'Quicksand', sans-serif;
+    --font-family3: 'Roboto', sans-serif;
+}
+
+html {
+    /* igual a 1rem = 10 px */
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* globales */
+body {
+    background-color: var(--color3);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.8rem;
+    font-size: var(--fuentePrincipal);
+    color: var(--color1);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--color5);
+    font-family: var(--fuentePrincipal);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+/* css clases */
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: center;
+    /* alinea horizontalmente*/
+    padding: 1rem;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin: 0;
+    /* Elimina el margen */
+    border: none;
+    /* Quita el borde */
+    padding: 0;
+    /* Elimina el relleno */
+}
+
+.logo-img {
+    margin: 0;
+}
+
+/* navegcion */
+.navegacion {
+    background-color: var(--color2);
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.nav-link {
+    font-family: var(--fuentePrincipal);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color1);
+}
+
+.nav-link:hover,
+.nav-link--active {
+    color: black;
+}
+
+/* footer */
+.footer {
+    background-color: var(--color2);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+@media (max-width : 800px) {
+    .footer {
+        background-color: var(--color2);
+        padding: 1rem 0;
+        margin: 0;
+    }
+}
+
+.footer-text {
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-weight: bold;
+}
+
+.main {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* grid main */
+.grid-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+
+}
+
+@media (max-width: 768px) {
+    .grid-main {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}
+
+
+/* main prodcutos*/
+
+.producto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color5);
+    padding: 3rem 1rem;
+    border-radius: .5rem
+}
+
+.producto img {
+    width: 40rem;
+    height: 35rem;
+    border-radius: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media(min-width: 768px) {
+    .producto img:hover {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 768px) {
+    .producto {
+        background-color: var(--color5);
+        padding: 3rem 1rem;
+        margin: 0;
+    }
+
+    .producto img {
+        width: 30rem;
+        height: 40rem;
+        margin: 0;
+    }
+}
+
+.p_nombre,
+.p_precio {
+    text-align: center;
+    color: var(--color1);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--fuentePrincipal);
+}
+
+.banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2rem;
+}
+
+.banner1 {
+    background-image: url(/img/My\ Anime\ For\ Life.png);
+    grid-row: 2 /3;
+    grid-column: 1 / 3;
+}
+
+@media(max-width:768px) {
+    .banner1 {
+        background-image: url(/img/portadaluufy.jpg);
+        grid-column: 1;
+    }
+}
+
+/* nosotros */
+.nosotros-div {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    background-color: var(--color5);
+    column-gap: 3rem;
+    padding: 2rem;
+}
+
+@media(min-width:768px) {
+    .nosotros-div {
+        grid-template-columns: repeat(3, 1fr);
+        background-color: var(--color5);
+        margin-left: 5rem;
+        margin-right: 5rem;
+        padding: 1rem;
+        border-radius: 5rem;
+
+    }
+}
+
+.img-nosotros {
+    grid-row: 1;
+    width: 100%;
+}
+
+@media(min-width:768px) {
+    .img-nosotros {
+        grid-column: 3/ 4;
+        place-items: center;
+        padding-top: 6rem;
+    }
+
+}
+
+.nosotros-contenido {
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: var(--fuentePrincipal);
+}
+
+@media(min-width:768px) {
+    .nosotros-contenido {
+
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-family: var(--fuentePrincipal);
+        padding: 5rem;
+        grid-column: 1 / 3;
+    }
+}
+.compra-titulo{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--fuentePrincipal);
+    font-size: 2rem;
+}
+.bloques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+@media(min-width:768px) {
+    .bloques {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bloque {
+    text-align: center;
+}
+
+.bloque-titulo {
+    margin: 0;
+    font-family: var(--fuentePrincipal);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+
+.img-bloque {
+    width: 25%;
+}
+.bloque p{
+    color: black;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: var(--fuentePrincipal);
+}
